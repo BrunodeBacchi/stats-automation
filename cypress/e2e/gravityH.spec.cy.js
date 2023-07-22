@@ -29,6 +29,12 @@ describe('Verificar tabela de Gravity', () => {
       } else {
         cy.log('Nenhum valor numérico válido encontrado na tabela de Gravity.');
       }
+    }).then(() => {
+      cy.get('.cd-nav-trigger > span').click();
+        cy.get('.choosechar').click();
+        cy.get('#searchbox').type(personagemMaior);
+        cy.get('.fox > a').click();
+        cy.get('.plain > :nth-child(7)');
     });
   });
 });
